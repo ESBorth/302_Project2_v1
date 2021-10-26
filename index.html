@@ -1,0 +1,106 @@
+<html>
+
+<head>
+  <title>
+    </title>
+    <link rel="stylesheet" href="katifornerstylesheet.css">
+<!----------------------------fonts---------------------------------->
+    <style>
+      @import url("https://use.typekit.net/jld0gnz.css");
+      </style>
+  </head>
+
+<body>
+<div class="pagecontainer">
+      <div class="titlebox">
+        <div class="row">
+          <div class="titleboxcolumn1">
+              <img src="KatiFornerLogo.png"
+              style= "height:25px; padding: 20px;">
+              </div>
+            <div class="titleboxcolumn2">
+              <h1 class="homepageheader">Kati Forner</h1>
+              </div>
+            <div class="titleboxcolumn3">
+              <div class="menucontainer" onclick="myFunction(this); openNav;">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+              <div id="myNav" class=menubaroverlay">
+                <div class="overlay-content">
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                  </div>
+                </div>
+              <script>
+                function myFunction(x) {
+                  x.classList.toggle("change");
+                  openNav();
+                  var clickCounter=0;
+                    input.onclick = function() {
+                    clickCounter++;
+                    if (clickCounter = 2) {
+                      closeNav();
+                    }
+                  }}
+                function openNav() {
+                  document.getElementById("myNav").style.width = "100%";
+                }
+                function closeNav() {
+                  document.getElementById("myNav").style.width = "0%";
+                }
+                </script>
+              </div>
+            </div>
+        </div>
+      <div class="sliderrow">
+        <div class="homeslider">
+          <div class="homesliderfade">
+            <img src="works1.jpg" style="width:100%;">
+            </div>
+          <div class="homesliderfade">
+            <img src="works5.jpg" style="width:100%;">
+            </div>
+          <div class="homesliderfade">
+            <img src="works9.jpg" style="width:100%;">
+            </div>
+            <div style="text-align: center;">
+              <div class="dotplacement">
+              <span class="dot" onclick="works1.jpg;"></span>
+              <span class="dot" onclick="works5.jpg;"></span>
+              <span class="dot" onclick="works9.jpg;"></span>
+              </div>
+              </div>
+          </div>
+        <div class="slidertextcolumn">
+          <h3 class="homeslidertext">A full-service design studio. <br> <br>
+          We transform brands, <br>
+          grow businesses, <br>
+          and tell stories that <br>
+          deepen engagement <br>
+          through thoughtful design.</h3>
+          </div>
+        </div>
+    </div>
+  <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("homesliderfade");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+      </script>
+  </body>
+
+</html>
